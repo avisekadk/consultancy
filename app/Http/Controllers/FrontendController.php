@@ -29,9 +29,17 @@ class FrontendController extends Controller
 
     public function about()
     {
-       
 
-        $page = Page::where('status',1)->first();
+        $page = Page::where('slug', 'about-us')->where('status', 1)->first();
+        
+        if (!$page) {
+            $page = Page::where('status', 1)->first();
+        }
+        
+        if (!$page) {
+            abort(404, 'About page not found');
+        }
+        
         $teams = Team::where('status', 1)->orderBy('order')->get();
         
         return view('frontend.about', compact('page', 'teams'));
@@ -105,7 +113,6 @@ class FrontendController extends Controller
     {
         $blog = Blog::where('slug', $slug)->where('status', 1)->firstOrFail();
         
-
         $blog->increment('views');
         
         $recentBlogs = Blog::where('status', 1)

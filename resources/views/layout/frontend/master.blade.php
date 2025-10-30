@@ -85,7 +85,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
 <div class="px-4 py-4 space-y-2 max-h-screen overflow-y-auto">
 <a href="/" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">Home</a>
-<a href="/about-us" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">About</a>
+<a href="/about" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">About</a>
 <a href="/courses" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">Courses</a>
 <a href="/services" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">Services</a>
 <a href="/countries" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">Study Abroad</a>

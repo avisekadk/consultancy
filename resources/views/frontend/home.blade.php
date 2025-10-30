@@ -412,44 +412,43 @@ View All Blogs <i class="fas fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- Contact CTA Section -->
+<!-- Contact CTA Section - FIXED FORM -->
 <section class="py-12 md:py-20 gradient-primary relative overflow-hidden">
-<div class="absolute inset-0 opacity-10 overflow-hidden">
-<div class="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full blur-3xl"></div>
-<div class="absolute -bottom-20 -right-20 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full blur-3xl"></div>
-</div>
-<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white bg-opacity-20 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 backdrop-blur-sm">
-<i class="fas fa-phone mr-2"></i>Get Free Consultation
-</div>
-<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Ready to Start Your Journey?</h2>
-<p class="text-sm md:text-base lg:text-xl text-gray-100 mb-6 md:mb-8 max-w-2xl mx-auto">Fill out the form and our experts will get back to you within 24 hours</p>
-<div class="bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-2xl">
-<form action="{{ route('contact.store') }}" method="POST" id="contactForm">
-@csrf
-<div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
-<input type="text" name="name" placeholder="Full Name *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base" required>
-<input type="email" name="email" placeholder="Email Address *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base" required>
-<input type="tel" name="phone" placeholder="Phone Number *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base" required>
-<input type="text" name="city" placeholder="Your City *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base" required>
-</div>
-<select name="course" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 mb-4 md:mb-6 text-sm md:text-base" required>
-<option value="">Select a course</option>
-@foreach($courses as $course)
-@if($course->status == 1)
-<option value="{{ $course->title }}">{{ $course->title }}</option>
-@endif
-@endforeach
-</select>
-<textarea name="message" placeholder="Your Message *" rows="4" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 mb-4 md:mb-6 text-sm md:text-base" required></textarea>
-<button type="submit" class="w-full px-6 md:px-8 py-3 md:py-4 gradient-accent text-white rounded-xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-sm md:text-base">
-<i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
-</button>
-</form>
-</div>
-</div>
+    <div class="absolute inset-0 opacity-10 overflow-hidden">
+        <div class="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -right-20 w-64 h-64 md:w-96 md:h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div class="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white bg-opacity-20 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 backdrop-blur-sm">
+            <i class="fas fa-phone mr-2"></i>Get Free Consultation
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Ready to Start Your Journey?</h2>
+        <p class="text-sm md:text-base lg:text-xl text-gray-100 mb-6 md:mb-8 max-w-2xl mx-auto">Fill out the form and our experts will get back to you within 24 hours</p>
+        <div class="bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-2xl">
+            <form action="{{ route('contact.store') }}" method="POST" id="contactForm">
+                @csrf
+                <div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+                    <input type="text" name="name" placeholder="Full Name *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base text-gray-900 placeholder-gray-400" required>
+                    <input type="email" name="email" placeholder="Email Address *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base text-gray-900 placeholder-gray-400" required>
+                    <input type="tel" name="phone" placeholder="Phone Number *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base text-gray-900 placeholder-gray-400" required>
+                    <input type="text" name="city" placeholder="Your City *" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 text-sm md:text-base text-gray-900 placeholder-gray-400" required>
+                </div>
+                <select name="course" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 mb-4 md:mb-6 text-sm md:text-base text-gray-900" required>
+                    <option value="">Select a course</option>
+                    @foreach($courses as $course)
+                    @if($course->status == 1)
+                    <option value="{{ $course->title }}">{{ $course->title }}</option>
+                    @endif
+                    @endforeach
+                </select>
+                <textarea name="message" placeholder="Your Message *" rows="4" class="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors duration-300 mb-4 md:mb-6 text-sm md:text-base text-gray-900 placeholder-gray-400" required></textarea>
+                <button type="submit" class="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-sm md:text-base">
+                    <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
 </section>
-
 <!-- Branches Section -->
 @if($branches->count() > 0)
 <section class="py-12 md:py-20 bg-white">
